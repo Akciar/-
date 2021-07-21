@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #f5f5f5;
+        }
+        .box{
+            width: 298px;
+            height: 415px;
+            background-color: #fff;
+            margin: 100px auto;
+        }
+        .box img{
+            width: 100%;
+        }
+        .name{
+            height: 70px;
+            font-size: 14px;
+            padding: 0 28px;
+            /* 因为有height所以不用padding撑开盒子高度 */
+            margin-top: 30px;
+        }
+        .review{
+            color: #b0b0b0;
+            font-size: 12px;
+            margin: 20px;
+            padding: 0 28px;
+        }
+        a{
+            text-decoration: none;
+            color: #ff6700;
+        }
+        .info{
+            font-size: 14px;
+            margin-top: 15px;
+            padding: 0 28px;
+        }
+        .info h4{
+            /* 此属性用在a上无效 */
+            display: inline-block;
+            font-weight: 400;
+        }
+        .info em{
+            /* display: inline-block; */
+            font-style: normal;
+            color: #ebe4e0;
+            margin: 0 6px 0 15px;
+        }
+        .info span{
+            text-decoration: line-through;
+            color: #ebe4e0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="08img.webp" alt="">
+        <p class="name">小米真无线蓝牙耳机Air 2 Pro</p>
+        <div class="review">主动降噪/持久续航/无线充</div>
+        <div class="info">
+            <h4><a href="">649元</a></h4>
+            <em>|</em>
+            <span>699元</span>
+        </div>
+    </div>
+    
+</body>
+</html>
