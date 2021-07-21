@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用vscode创建的html页面</title>
+</head>
+<body>
+    <h1>标题标签</h1>
+    <p>段落标签</p>
+    强制换行标签<br/>
+    <strong>加粗</strong>文字语义强
+    <b>加粗</b>文字
+    <em>倾斜</em>文字语义强
+    <i>倾斜</i>文字
+    <del>删除</del>文字语义强
+    <s>删除</s>文字
+    <ins>下划线</ins>语义强
+    <u>下划线</u>
+    <div>大盒子，一个div独占一行</div>
+    <span>小盒子，用于布局，一行可放多个span</span>
+
+    <h4>图片标签</h4>
+    <img src="图片URL" alt="图像无法显示时的替换文本"/>
+    <!-- 相对路径 -->  <!-- 下一级/，上一级../ -->  <!-- 绝对路径\ -->
+    <img src="02的img.png" alt="图像无法显示时的替换文本" title="鼠标指向图片时显示的文字"/>
+    <img src="02的img.png" alt="图像无法显示时的替换文本" title="金渐层" width="250" height="300" border="10"/>
+
+    <h4>超链接标签</h4>
+    <a href="http://www.baidu.com" target="_blank">新页面打开外部链接百度</a>
+    <a href="http://www.baidu.com" target="_self">当前页面打开外部链接百度</a>
+    <a href="03.html" target="_blank">新页面打开内部链接</a>
+    <a href="#">打开空链接</a>
+    <a href="xxx.zip">下载链接</a>
+    <a href="http://www.baidu.com"><img src="02的img.png"></a>
+    <a href="#maodian">锚点链接</a>
+    <!-- 注释，快速 ctrl+/ -->
+    &lt;空&nbsp;格&gt;
+
+    <h4>表格标签</h4>
+    <!-- align = "center" / "left" / "right" -->
+    <!-- border = "1" / "" -->
+    <!-- cellpadding：单元边与内容间隔，默认1像素 -->
+    <!-- cellspacing：单元格之间的间隔，默认2像素 -->
+    <!-- width：像素值或百分比 -->
+    <table align="center" border="" cellpadding="20" cellspacing="0" width="500" height="120">
+        <!-- 表头 -->
+        <thead>
+            <!-- 行 -->
+            <tr>
+                <!-- 跨行合并单元格，目标单元格为最上单元格 -->
+                <th colspan="2">表头单元格</th>
+                <th>加粗居中</th>
+            </tr>
+        </thead>
+        <!-- 表体 -->
+        <tbody>
+            <tr>
+                <!-- 跨列合并单元格，目标单元格为最左单元格 -->
+                <td rowspan="2">单元格1</td>
+                <td>单元格2</td>
+                <td>单元格3</td>
+            </tr>
+            <tr>
+                <td>单元格4</td>
+                <td>单元格5</td>
+            </tr>
+        </tbody>  
+    </table>
+
+    <h4>列表标签</h4>
+    <ul>
+        <li>无序列表项1</li>
+        <li>无序列表项2</li>
+        <p3>无序列表项3</p3>
+    </ul>
+    <ol>
+        <li>有序列表项1</li>
+        <li>有序列表项2</li>
+        <p3>有序列表项3</p3>
+    </ol>
+    <dl>
+        <dt>自定义列表项</dt>
+        <dd>自定义列表项分支1</dd>
+        <dd>自定义列表项分支2</dd>
+    </dl>
+    
+    <h4>表单标签</h4>
+    <!-- action="处理表单的服务器URL" method="提交方式get/post" name="表单域名称" -->
+    <form action="fuwuqi.php" method="get" name="form1">
+        <!-- 文本框 -->
+        <label for="text">用户名</label> <input type="text" name="username" value="请输入用户名" maxlength="6" id="text"/> <br/>
+        <!-- 密码框 -->
+        密码<input type="password" name="password"/> <br/>
+        <!-- 单选框，name相同才可实现多选一 -->
+        性别
+        <input type="radio" name="sex" value="男" checked="checked"/>男
+        <input type="radio" name="sex" value="女" id="nv"/> <label for="nv">女</label>
+        <br/>
+        <!-- 复选框 -->
+        爱好
+        <input type="checkbox" value="吃"/>吃 
+        <input type="checkbox" value="睡"/>睡 
+        <input type="checkbox" value="玩"/>玩 
+        <br/>
+        <!-- 上传文件 -->
+        上传头像<input type="file"/> <br/>
+        <!-- 清空表单元素值 -->
+        重置<input type="reset" value="清空"/> <br/>
+        <!-- 表单提交给服务器 -->
+        <input type="submit" value="免费注册"/> <br/>
+        <!-- 普通按钮，与js结合使用 -->
+        <input type="button" value="获取短信验证码"/> <br/>
+        <!-- 未完善 -->
+        <!-- 图像形式的提交按钮 -->
+        <input type="image"/> <br/>
+        <!-- 隐藏的输入字段 -->
+        <input type="hidden"/> <br/>
+
+        下拉表单
+        <select>
+            <option>北京</option>
+            <option selected="selected">天津</option>
+            <option>杭州</option>
+        </select> <br/>
+        
+        多行文本框
+        <textarea cols="50" rows="5">啦啦啦啦啦
+        </textarea>
+    </form>
+
+    <!-- 案例部分 -->
+    <h4>青春不常在 抓紧谈恋爱</h4>
+    <table width="500">
+        <!-- 第一行 -->
+        <tr>
+            <td>性别：</td>
+            <td>
+                <input type="radio" name="sex" id="man"/> <label for="man"><img src="man.png"/> 男</label>
+                <input type="radio" name="sex" id="woman"/> <label for="woman"><img src="woman.png"/> 女</label>
+            </td>
+        </tr>
+        <!-- 第二行 -->
+        <tr>
+            <td>生日：</td>
+            <td>
+                <select >
+                    <option>--请选择年--</option>
+                    <option>2000</option>
+                    <option>2001</option>
+                </select>    
+                <select >
+                    <option>--请选择月--</option>
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+                <select >
+                    <option>--请选择日--</option>
+                    <option>10</option>
+                    <option>20</option>
+                </select>
+            </td>
+        </tr>
+        <!-- 第三行 -->
+        <tr>
+            <td>所在地区：</td>
+            <td>
+                <input type="text" value="北京"/>
+            </td>
+        </tr>
+        <!-- 第四行 -->
+        <tr>
+            <td>婚姻状况：</td>
+            <td>
+                <input type="radio" name="marry" id="yihun" checked="checked"/> <label for="yihun">已婚</label>
+                <input type="radio" name="marry" id="weihun"/> <label for="weihun">未婚</label>
+            </td>
+        </tr>
+        <!-- 第五行 -->
+        <tr>
+            <td>学历：</td>
+            <td>
+                <input type="text" value="博士后"/>
+            </td>
+        </tr>
+        <!-- 第六行 -->
+        <tr>
+            <td>喜欢的类型：</td>
+            <td>
+                <input type="checkbox" name="like" id="xiaoxianrou"/> <label for="xiaoxianrou">小鲜肉</label>
+                <input type="checkbox" name="like" id="laolarou"/> <label for="laolarou">老腊肉</label>
+                <input type="checkbox" name="like" id="xiaonaigou"/> <label for="xiaonaigou">小奶狗</label>
+                <input type="checkbox" name="like" id="hashiqi"/> <label for="hashiqi">哈士奇</label>
+                <input type="checkbox" name="like" id="douxihuan" checked="checked"/> <label for="douxihuan">都喜欢</label>
+            </td>
+        </tr>
+        <!-- 第七行 -->
+        <tr>
+            <td>自我介绍：</td>
+            <td>
+                <textarea>
+                    我是
+                </textarea>
+            </td>
+        </tr>
+        <!-- 第八行 -->
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value=免费注册>
+            </td>
+        </tr>
+        <!-- 第九行 -->
+        <tr>
+            <td></td>
+            <td>
+                <input type="checkbox" id="tongyi" checked="checked"/> <label for="tongyi">我同意注册会员相关条例</label>
+            </td>
+        </tr>
+        <!-- 第十行 -->
+        <tr>
+            <td></td>
+            <td>
+                <a href=#>我是会员，立即登录</a>
+            </td>
+        </tr>
+        <!-- 第十一行 -->
+        <tr>
+            <td></td>
+            <td>
+                <h5>我承诺</h5>
+                <ul>
+                    <li>年满18岁、单身</li>
+                    <li>态度认真严谨</li>
+                    <li>真心寻找另一半</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <h4 id="maodian">锚点链接</h4> 
+</body>
+</html>
